@@ -1,3 +1,4 @@
+#This code uses brute-force approach. For more faster approach, look OptimizedSlidingWindowConsonants.cs
 K = int(input())
 S = input().strip()
 for i in range(len(S) - K + 1):
