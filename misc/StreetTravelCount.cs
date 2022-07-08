@@ -1,26 +1,45 @@
 using System;
-using 
+using System.Collections.Generic;
 using System.Linq;
 
 public class Program
 {
     static int N;
     static int[,] M;
-    static bool[,] visited;
+    static bool[] visited;
 
     static List<int> GetNearbyNodes(int node)
     {
+        var list = new List<int>();
         int row = node / N;
         int col = node % N;
-        //for(int i = 0; i <)
-
-        //TODO: Need to completed
+        for(int i = row; i < N; i++)
+        {
+            if(M[i, col] == 1) list.Add(i * N + col);
+            else break;
+        }
+        for(int i = row; i >= 0; i--)
+        {
+            if(M[i, col] == 1) list.Add(i * N + col);
+            else break;
+        }
+        for(int i = col; col < N; i++)
+        {
+            if(M[row, i] == 1) list.Add(row * N + i);
+            else break;
+        }
+        for(int i = col; col >= 0; i--)
+        {
+            if(M[row, i] == 1) list.Add(row * N + i);
+            else break;
+        }
+        return list;
     }
 
     static void Main(string[] args)
     {
         N = int.Parse(Console.ReadLine().Trim());
-        M = new int[R, C];
+        M = new int[N, N];
         for(int i = 0; i < N; i++)
         {
             var line = Console.ReadLine().Trim().Split(' ').Select(int.Parse).ToList();
