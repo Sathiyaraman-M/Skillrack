@@ -14,7 +14,7 @@ public class Program
         {
             for(int j = y - 1; j <= y + 1; j++)
             {
-                if(i >= 0 && i < R && j >= 0 && j < C && M[i, j] == true && !visited[i, j])
+                if(i >= 0 && i < R && j >= 0 && j < C && M[i, j] == 1 && !visited[i, j])
                     VisitAllAdjacentNodes(i, j);
             }
         }
