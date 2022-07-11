@@ -11,7 +11,7 @@ class Calculator
     }
     int add()
     {
-        return a + b;
+        return _a + _b;
     }    
 };
 int main()
