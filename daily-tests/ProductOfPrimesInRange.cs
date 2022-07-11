@@ -17,7 +17,7 @@ public class Program
         int start = tokens[0], end = tokens[1];
         var values = Enumerable.Range(start, end - start + 1).Where(IsPrime).ToList();
         int product = 1;
-        foreach(var i in product)
+        foreach(var i in values)
             product *= i;
         Console.Write(product);
     }
