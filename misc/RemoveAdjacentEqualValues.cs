@@ -18,7 +18,7 @@ public class Program
             else
             {
                 if(stack.Peek() == list[i]) stack.Pop();
-                else stack.Push();
+                else stack.Push(list[i]);
             }            
         }
         if(stack.Count == 0)
@@ -28,7 +28,7 @@ public class Program
         }
         while(stack.Count > 0)
         {
-            Console.Write(stack.Pop());
+            Console.Write(stack.Pop() + " ");
         }        
     }
 }
