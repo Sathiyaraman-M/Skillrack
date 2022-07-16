@@ -1,0 +1,1 @@
+print(len(input().strip().replace(',',' ').split()))
