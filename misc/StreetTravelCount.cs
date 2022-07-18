@@ -23,12 +23,12 @@ public class Program
             if(M[i, col] == 1) list.Add(i * N + col);
             else break;
         }
-        for(int i = col; col < N; i++)
+        for(int i = col; i < N; i++)
         {
             if(M[row, i] == 1) list.Add(row * N + i);
             else break;
         }
-        for(int i = col; col >= 0; i--)
+        for(int i = col; i >= 0; i--)
         {
             if(M[row, i] == 1) list.Add(row * N + i);
             else break;
