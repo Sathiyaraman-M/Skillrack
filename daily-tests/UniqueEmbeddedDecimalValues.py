@@ -14,7 +14,7 @@ if N == 1:
 L = []
 for i in range(len(B) - 1):
     for j in range(i, len(B)):
-        if int(getStr(B[i:j + 1])) not in L:
+        if int(getStr(B[i:j + 1]), 2) not in L:
             L.append(int(getStr(B[i:j + 1]), 2))
 
 print(*L)
