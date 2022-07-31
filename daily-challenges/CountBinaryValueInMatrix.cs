@@ -28,7 +28,6 @@ public class Program
         for(int i = 0; i < R; i++)
             arr[i] = new string(Console.ReadLine().Trim().Split(' ').Select(x => char.Parse(x.Trim())).ToArray());
         int N = int.Parse(Console.ReadLine());
-        int N = 4;
         int pos = 1;
         string bin = "";
         while(pos <= N)
