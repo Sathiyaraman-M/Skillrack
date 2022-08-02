@@ -11,30 +11,29 @@ public class Program
             Console.Write("*");
     }
     
-    static void PrintLine(int start, Func<int, bool> condition, Func<int, int> action)
+    static void PrintLine(int i)
     {
-        for(int i = start; condition(i); i = action(i))
-        {
-            PrintStar(i);
-            Console.Write(i + 1);
-            PrintStar(2 * N - 2 * i - 3);
-            Console.Write(i + 1);
-            PrintStar(i);
-            Console.WriteLine();
-        }
+        PrintStar(i);
+        Console.Write(i + 1);
+        PrintStar(2 * N - 2 * i - 3);
+        Console.Write(i + 1);
+        PrintStar(i);
+        Console.WriteLine();
     }
     
     static void Main()
     {
         N = int.Parse(Console.ReadLine());
         
-        PrintLine(0, x => x < N - 1, x => x + 1);
+        for(int i = 0; i < N - 1; i++)
+            PrintLine(i);
         
         PrintStar(N - 1);
         Console.Write(N);
         PrintStar(N - 1);
         Console.WriteLine();
         
-        PrintLine(N - 2, x => x >= 0, x => x - 1);
+        for(int i = N - 2; i >= 0; i--)
+            PrintLine(i);
     }
 }
