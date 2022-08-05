@@ -9,8 +9,8 @@ public class Program
         int N = int.Parse(Console.ReadLine());
         var list = Console.ReadLine().Trim().Split(' ').Select(long.Parse).ToList();
         var max = list.Max();
-        var fibo = new List<int>();
-        int a = 0, b = 1, c = 1;
+        var fibo = new List<long>();
+        long a = 0, b = 1, c = 1;
         fibo.Add(a);
         fibo.Add(b);
         while(c <= max)
