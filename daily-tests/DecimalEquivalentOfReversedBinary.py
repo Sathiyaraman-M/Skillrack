@@ -1,0 +1,1 @@
+print(int(bin(int(input().strip()))[2:][::-1], 2))
