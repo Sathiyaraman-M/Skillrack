@@ -1,0 +1,1 @@
+print(*sorted(list(input().strip()))[::-1], sep = '')
