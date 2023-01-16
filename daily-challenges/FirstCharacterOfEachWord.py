@@ -1,0 +1,1 @@
+print(*[i[0] for i in input().strip().split()], sep = '')
