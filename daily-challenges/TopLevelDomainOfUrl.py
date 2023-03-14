@@ -1,0 +1,1 @@
+print('.', input().strip().split('/')[2].split('.')[-1], sep = '')
