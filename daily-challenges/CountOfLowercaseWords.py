@@ -1,0 +1,1 @@
+print(len([i for i in input().strip().split() if i.islower() and i.isalpha()]))
