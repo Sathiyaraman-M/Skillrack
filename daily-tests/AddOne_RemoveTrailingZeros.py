@@ -1,0 +1,1 @@
+print(str(int(input().strip()) + 1).strip('0'))
