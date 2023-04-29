@@ -1,0 +1,5 @@
+N = int(input())
+L = list(map(int, input().split()))
+K = int(input())
+print(*L[:N - K], end = ' ')
+print(*map(lambda x: -x, L[N - K:]))
